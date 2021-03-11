@@ -91,7 +91,7 @@ export default {
 
 <style>
 body {
-  background-color: #474d8a;
+  background-color: #443988 ;
 }
 
 .cover {
@@ -113,26 +113,26 @@ body {
 }
 
 .navbar-item:hover {
-  color: #ef7a23 !important;
+  color: #ffbe00  !important;
 }
 
 .title-podcast {
-  color: #ef7a23;
+  color: #ffbe00;
 }
 
 .btn, .btn2 {
-  background-color: #ef7a23;
+  background-color: #9f0052 ;
   color: #fff;
   border: none;
 }
 
 .btn:hover {
-  background-color: #3e99d5;
+  background-color: #ffbe00 ;
   color: #fff;
 }
 
 .btn2:hover {
-  background-color: #1e3c91;
+  background-color: #ffbe00  ;
   color: #fff;
 }
 
@@ -161,6 +161,7 @@ body {
 
 .bg-medium {
   background-image: url('assets/fondo3.svg');
+  background-repeat: no-repeat;
 }
 
 </style>

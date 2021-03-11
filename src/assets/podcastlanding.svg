@@ -1,8 +1,8 @@
 <svg width="1288" height="728" viewBox="0 0 1288 728" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0)" filter="url(#filter0_d)">
-<rect width="1280" height="720" transform="translate(4)" fill="#474D8A"/>
-<path d="M656 720H1284V218C1108.8 235.6 1110.33 337.333 1133 386C1285.8 636 1147 649.5 1058.5 625C763.7 582.6 667.333 670.667 656 720Z" fill="#1E3C91" stroke="#1E3C91"/>
-<path d="M426.5 1H2V497C143.6 534.6 175 440 173 388C173 274.5 202.5 262 362.5 270C497.7 276.4 461.5 93.3333 426.5 1Z" fill="#1E3C91" stroke="#1E3C91"/>
+<rect width="1280" height="720" transform="translate(4)" fill="#443988"/>
+<path d="M656 720H1284V218C1108.8 235.6 1110.33 337.333 1133 386C1285.8 636 1147 649.5 1058.5 625C763.7 582.6 667.333 670.667 656 720Z" fill="#227dac" stroke="#227dac"/>
+<path d="M426.5 1H2V497C143.6 534.6 175 440 173 388C173 274.5 202.5 262 362.5 270C497.7 276.4 461.5 93.3333 426.5 1Z" fill="#227dac" stroke="#227dac"/>
 <circle cx="1111" cy="285" r="85" fill="#3E99D5"/>
 <circle cx="902" cy="386" r="266" fill="#3E99D5"/>
 <rect x="656" y="221" width="492" height="349" rx="102" fill="url(#pattern0)"/>
