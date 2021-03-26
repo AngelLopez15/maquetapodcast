@@ -35,7 +35,7 @@
       <div class="container">
         <div class="mt-6 content-header">
           <h1 class="is-size-1 px-3 title-podcast">PODCAST</h1>
-          <p class="mt-5 px-3 is-size-3 has-text-white">
+          <p class="mt-5 px-3 is-size-3 intro-color">
             Unde quia minima aspernatur quam fugit in est. Autem et ipsam
             molestias ad autem ut aut. Et alias eveniet occaecati et.
           </p>
@@ -69,9 +69,11 @@
       <section class="section-medium">
         <div class="container">
           <div class="columns">
-            <div class="column pt-6 bg-medium">
-              <h1 class="is-size-1">Natus asperiores illo</h1>
-              <p class="is-size-4 mt-3">Asperiores consequatur sint quam omnis sint. Molestias quibusdam quaerat et vel quas. Magnam qui velit blanditiis. Incidunt dolorem veritatis aut consequatur nihil nemo ab. Sunt at omnis non eum similique voluptas qui.</p>
+            <div class="column pt-6">
+              <div class="bg-medium">
+                <h1 class="is-size-1">Natus asperiores illo</h1>
+                <p class="is-size-4 mt-3">Asperiores consequatur sint quam omnis sint. Molestias quibusdam quaerat et vel quas. Magnam qui velit blanditiis. Incidunt dolorem veritatis aut consequatur nihil nemo ab. Sunt at omnis non eum similique voluptas qui.</p>
+              </div>
             </div>
             <div class="column is-flex is-justify-content-center">
               <img src="./assets/Podcast-color.svg" alt="svg" class="imagen">
@@ -91,7 +93,7 @@ export default {
 
 <style>
 body {
-  background-color: #443988 ;
+  background-color: #f2f2f2;
 }
 
 .cover {
@@ -104,12 +106,18 @@ body {
   background-position: -0.5rem;
 }
 
+.intro-color {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #000;
+}
+
 .navbar {
   background-color: transparent;
 }
 
 .navbar-item {
-  color: white;
+  color: #9f0052;
 }
 
 .navbar-item:hover {
@@ -117,6 +125,8 @@ body {
 }
 
 .title-podcast {
+  font-size: 6rem;
+  font-weight: bold;
   color: #ffbe00;
 }
 
@@ -151,17 +161,18 @@ body {
 
 .section-medium {
   height: 32rem;
-  color: #fff;
+  color: #000;
   overflow: hidden;
 }
 
 .imagen {
-  width: 30rem;
+  width: 35rem;
 }
 
 .bg-medium {
-  background-image: url('assets/fondo3.svg');
-  background-repeat: no-repeat;
+  margin-top: 5rem;
+  /* background-image: url('assets/fondo3.svg');
+  background-repeat: no-repeat; */
 }
 
 </style>
