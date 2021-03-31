@@ -73,6 +73,23 @@
               <div class="bg-medium">
                 <h1 class="is-size-1">Natus asperiores illo</h1>
                 <p class="is-size-4 mt-3">Asperiores consequatur sint quam omnis sint. Molestias quibusdam quaerat et vel quas. Magnam qui velit blanditiis. Incidunt dolorem veritatis aut consequatur nihil nemo ab. Sunt at omnis non eum similique voluptas qui.</p>
+                <div>
+                  <form @submit.prevent="procesarSuscripcion">
+                    <ul class="form-inputs">
+                      <li>
+                        <label for="name">Nombre:</label>
+                        <input  class="input" type="text" v-model.trim="dataContact.name" name="user_name" />
+                      </li>
+                      <li>
+                        <label for="mail">Correo electrónico:</label>
+                        <input class="input" type="email" v-model="dataContact.email" name="user_email" />
+                      </li>
+                      <li>
+                        <button class="btn button" type="submit">Suscribirse</button>
+                      </li>
+                    </ul>
+                  </form>
+                </div>
               </div>
             </div>
             <div class="column is-flex is-justify-content-center">
@@ -86,14 +103,71 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: "App",
+  data() {
+    return {
+      nameForm: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/,
+      emailForm: /^[a-zA-Z0-9_-]+(?:\.[a-zA-Z0-9_-]+)*@(?:[a-z0-9]+\.)+[a-z0-9]+$/,
+      dataContact: {
+        name: '',
+        email: '',
+      },
+    }
+  },
+  methods: {
+    procesarSuscripcion() {
+      
+      const nombre = this.dataContact.name
+      const correo = this.dataContact.email
+
+      console.log(this.dataContact)
+      
+      const data = JSON.stringify({
+        "name": nombre,
+        "email": correo,
+      });
+      // console.log(data)
+      const config = {
+        method: 'post',
+        url: 'http://localhost:1337/suscripcions/subs',
+        headers: { 
+          'Content-Type': 'application/json',
+        },
+        data : data
+      };
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+      this.dataContact = {
+        name: '',
+        email: '',
+      }
+    }
+  },
 };
 </script>
 
 <style>
 body {
   background-color: #f2f2f2;
+}
+
+li {
+  min-width: 200px;
+  margin: 0 0.5rem;
+}
+
+.input {
+  border-radius: 25px;
+  border: none;
+  /* padding: 0.5rem 0; */
 }
 
 .cover {
@@ -104,6 +178,13 @@ body {
   background-size: cover;
   background-clip: border-box;
   background-position: -0.5rem;
+}
+
+.form-inputs {
+  margin: 0.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .intro-color {
